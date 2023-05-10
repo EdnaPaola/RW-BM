@@ -5,7 +5,7 @@ end<-1
 size<-.01
 i=20
 N<-10000
-alpha<--50
+alpha<--15
 pn<-1/2+(alpha)/(2*sqrt(N))
 
 Yt<-function(x,i){1/sqrt(N)*df[trunc(N*x)+1,i]}
