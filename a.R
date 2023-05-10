@@ -3,7 +3,7 @@ library("reshape2")
 start<-0
 end<-1
 size<-.01
-i=10
+i=20
 N<-10000
 pn<-1/2
 
@@ -42,4 +42,6 @@ Yt<-function(x,i){1/sqrt(N)*df[trunc(N*x)+1,i]}
 
   dfc_long <- melt(dfc, id= c("Step")) 
   ggplot(data = dfc_long, aes(x = Step, y = value, color = variable)) +
-    geom_line()+theme(legend.position="none")+ ggtitle('Brownian Approx Comparison')
+    geom_line()+theme(legend.position="none")+ 
+    scale_color_manual(values = c(rep("gray", 20),"blue","blue")) + 
+    ggtitle('Brownian Approx Comparison')
